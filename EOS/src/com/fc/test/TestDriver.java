@@ -8,6 +8,6 @@ public class TestDriver {
 		// TODO Auto-generated method stub
 		DateUtil dateUtil = new DateUtil();
 		System.out.println(dateUtil.getDate());
-		System.out.println("successfully executed....");
+		System.out.println("successfully executed..");
 	}
 }
