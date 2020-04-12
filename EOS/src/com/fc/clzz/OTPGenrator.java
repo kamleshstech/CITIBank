@@ -13,4 +13,9 @@ public class OTPGenrator {
 		
 		return "Your OTP is this valid for next 10 mins don't share with any one";
 	}
+	
+	public int reSendOTP() {
+		
+		return getOtp();
+	}
 }
