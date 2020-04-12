@@ -18,4 +18,9 @@ public class OTPGenrator {
 		
 		return getOtp();
 	}
+	
+	public String msgGenerator() {
+		
+		return "msg generator....";
+	}
 }
