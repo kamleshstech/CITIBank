@@ -22,5 +22,9 @@ public class OTPGenrator {
 	public String msgGenerator() {
 		
 		return "msg generator....";
+	}	
+	public void userVerification(){
+		
+		System.out.println("user userVerification done");
 	}
 }
