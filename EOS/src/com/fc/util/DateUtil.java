@@ -8,4 +8,8 @@ public class DateUtil {
 		
 		return new Date();
 	}
+	
+	public void getModified() {
+		System.out.println("modified...");
+	}
 }
