@@ -12,5 +12,6 @@ public class DateUtil {
 	public void getModifyed() {
 		
 		System.out.println("Modified......");
+		System.out.println("=================");
 	}
 }
