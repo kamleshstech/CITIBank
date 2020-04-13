@@ -1,5 +1,6 @@
 package com.fc.test;
 
+import com.fc.clzz.OTPGenrator;
 import com.fc.util.DateUtil;
 
 public class TestDriver {
@@ -9,5 +10,9 @@ public class TestDriver {
 		DateUtil dateUtil = new DateUtil();
 		System.out.println(dateUtil.getDate());
 		System.out.println("successfully executed..");
+	  //================================================
+		
+		OTPGenrator otp = new OTPGenrator();
+		System.out.println(otp.getOtp()); 
 	}
 }
