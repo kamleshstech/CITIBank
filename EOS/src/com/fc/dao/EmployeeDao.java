@@ -13,40 +13,90 @@ public class EmployeeDao {
 	private static ConnectionProvider cp = new ConnectionProvider();
 	private static Connection con;
 	
+    public ArrayList<Employee> empList; 
 	
-	private ArrayList<Employee> empList;
+	public EmployeeDao() {
+		
+		empList = new ArrayList<Employee>();
+	}
 	
 	public void addEmployee(Employee employee)   { 
-		try {
-			con=cp.getConnection();
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}  
+		//empList.clear();
 		
-		Statement st = cp.createStatement(con);
+		Employee emp1 = new Employee();
+		 		 emp1.setId(1);
+		 		 emp1.setName("Mahesh");
+		 		 emp1.setDesignation("ASE"); 
+		 		 emp1.setSalary(534234.84f); 
+		Employee emp2 = new Employee();
+		 		 emp2.setId(2); 
+		 		 emp2.setName("Ramesh");
+		 		 emp2.setDesignation("SE");
+		 		 emp2.setSalary(100020.67f); 
+		Employee emp3 = new Employee();
+	     		 emp3.setId(3); 
+	     		 emp3.setName("Suresh");
+	     		 emp3.setDesignation("SE");
+	     		 emp3.setSalary(200020.67f); 
+	
+		empList.add(emp1);
+		empList.add(emp2);
+		empList.add(emp3);
 		
-		empList = new ArrayList<Employee>(); 
-		
-
-		empList.add(employee);
-		
-		System.out.println("Employee added successfully...."+employee.getId()+":"+employee.getName()); 
+		System.out.println(empList.size());
+		System.out.println("Employee added successfully...."); 
 	}
 	public Employee getEmployee(int id){
-		
+		Employee emp1 = new Employee();
+		         emp1.setId(1);
+		         emp1.setName("Mahesh");
+		         emp1.setDesignation("ASE"); 
+		         emp1.setSalary(534234.84f); 
+	    Employee emp2 = new Employee();
+		 		 emp2.setId(2); 
+		 		 emp2.setName("Ramesh");
+		 		 emp2.setDesignation("SE");
+		 		 emp2.setSalary(100020.67f); 
+	    Employee emp3 = new Employee();
+		 		 emp3.setId(3); 
+		 		 emp3.setName("Suresh");
+		 		 emp3.setDesignation("SE");
+		 		 emp3.setSalary(200020.67f); 
+
+	    empList.add(emp1);
+	    empList.add(emp2);
+	    empList.add(emp3);
+
+		System.out.println("empDAO :"+id);
+		int empId = id;
+		System.out.println("EmpId : "+empId); 
+		System.out.println("size of empList : "+empList.size()); 
 	    Employee emp = empList.get(0);
 		
 		return emp;
 	}
 	public List<Employee> getEmployees(){
 		
-		List<Employee> al = new ArrayList<Employee>() ; 
-		
-		for(Employee e : empList) {
-			al.add(e);
-		}
-		
-		return al;
+		Employee emp1 = new Employee();
+         		 emp1.setId(1);
+         		 emp1.setName("Mahesh");
+         		 emp1.setDesignation("ASE"); 
+         		 emp1.setSalary(534234.84f); 
+        Employee emp2 = new Employee();
+		         emp2.setId(2); 
+		         emp2.setName("Ramesh");
+		         emp2.setDesignation("SE");
+		         emp2.setSalary(100020.67f); 
+        Employee emp3 = new Employee();
+		   	     emp3.setId(3); 
+		         emp3.setName("Suresh");
+		         emp3.setDesignation("SE");
+		         emp3.setSalary(200020.67f); 
+
+		         empList.add(emp1);
+		         empList.add(emp2);
+		         empList.add(emp3);
+
+		return empList;
 	}
 }

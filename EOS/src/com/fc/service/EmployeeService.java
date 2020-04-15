@@ -10,22 +10,22 @@ public class EmployeeService {
 	private EmployeeDao empDao;
 	private List<Employee> empList;
 	
-	public void addEmp(Employee emp) {
-		empDao = new EmployeeDao();
-		try {
-			empDao.addEmployee(emp);
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public EmployeeService() {
 		
+		empDao = new EmployeeDao();
+	}
+	
+	public void addEmp(Employee emp) {
+	
+		empDao.addEmployee(emp);
 	}
 	
 	public Employee getEmp(int id) {
+		System.out.println("empSVc "+id);  
 		Employee emp=empDao.getEmployee(id);
+		
 		return emp;
-	}
-	
+	}	
 	public List<Employee> getEmps(){
 		
 		empList = empDao.getEmployees();
