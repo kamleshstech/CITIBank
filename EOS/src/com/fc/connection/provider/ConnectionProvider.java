@@ -9,10 +9,8 @@ public class ConnectionProvider {
 	private String userName;
 	private String pwd;
 	private String driverClass;
-	
 
-
-	public Connection getConnection() throws Exception { 
+	public Connection getConnection() throws ArithmeticException { 
 		
 		Connection con = new Connection("url", "userName", "pwd", "driverClass");
 		
